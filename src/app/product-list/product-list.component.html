@@ -1,0 +1,11 @@
+<h2>Catálogo de Productos</h2>
+<hr>
+
+<div *ngFor="let prod of products">
+  <a [routerLink]="['/products',prod._id]">
+    <h3>{{  prod.name }}</h3>
+  </a>
+  <p> {{  prod.description  }}</p>
+  <strong> {{ prod.price | currency }}</strong><br>
+  <img src="{{prod.image}}" alt="" width=300 height=200><hr>
+</div>
